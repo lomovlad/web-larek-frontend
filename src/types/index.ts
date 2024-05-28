@@ -1,3 +1,6 @@
+import { IOrderContactsForm } from '../components/views/ContactsForm';
+import { IOrderDeliveryForm } from '../components/views/DeliveryForm';
+
 // Доступные категории карточек
 export type ILotCategory =
 	| 'софт-скил'
@@ -28,20 +31,6 @@ export interface ILarek {
 export type ILot = ILotItem & ILarek;
 
 export type IPaymentType = 'card' | 'cash';
-
-// Полный интерфейс формы
-
-// Интерфейс формы с контактной информацией
-export interface IOrderContactsForm {
-	email: string; // Почта для связи
-	phone: string; // Телефон для связи
-}
-
-//  Интерфейс формы оплатой и доставкой
-export interface IOrderDeliveryForm {
-	payment: IPaymentType; // Способ оплаты
-	address: string; // Адрес доставки
-}
 
 export type IOrderForm = IOrderDeliveryForm & IOrderContactsForm;
 
