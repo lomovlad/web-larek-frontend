@@ -3,7 +3,7 @@ import './scss/styles.scss';
 
 // Импортирование необходимых утилит, компонентов и типов данных
 import { cloneTemplate, ensureElement } from './utils/utils';
-import { EventEmitter } from './components/base/events';
+import { EventEmitter } from './components/base/Events';
 import { LarekAPI } from './components/LarekAPI';
 import { API_URL, CDN_URL } from './utils/constants';
 import { Page } from './components/views/Page';

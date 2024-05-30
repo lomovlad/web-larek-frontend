@@ -1,6 +1,6 @@
 import { Events, IPaymentType } from '../../types';
 import { ensureElement } from '../../utils/utils';
-import { IEvents } from '../base/events';
+import { IEvents } from '../base/Events';
 import { Form } from './form';
 
 // Интерфейс формы оплатой и доставкой
@@ -41,11 +41,7 @@ class DeliveryForm extends Form<IOrderDeliveryForm> {
 
 	setClassPaymentMethod(className: string): void {
 		this._paymentButtons.forEach((btn) => {
-			if (btn.name === className) {
-				this.toggleClass(btn, 'button_alt-active', true); // Добавляем класс активности выбранной кнопке
-			} else {
-				this.toggleClass(btn, 'button_alt-active', false); // Удаляем класс активности у остальных кнопок
-			}
+			this.toggleClass(btn, 'button_alt-active', btn.name === className);
 		});
 	}
 

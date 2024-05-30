@@ -2,7 +2,7 @@ import { ILotCategory } from '../../types';
 import { CATEGOTY_MAP } from '../../utils/constants';
 import { ensureElement, formatSinaps } from '../../utils/utils';
 import { Component } from '../base/Component';
-import { IEvents } from '../base/events';
+import { IEvents } from '../base/Events';
 
 // Интерфейс для действий, доступных на карточке
 interface ICardActions {
@@ -69,7 +69,8 @@ class Card extends Component<ICard> {
 		this._category.className = '';
 		const mainClass = `${this.blockName}__category`;
 		const additionalClass = CATEGOTY_MAP[value];
-		this._category.classList.add(mainClass, `${mainClass}_${additionalClass}`);
+		this.toggleClass(this._category, mainClass, true);
+    this.toggleClass(this._category, `${mainClass}_${additionalClass}`, true);
 	}
 
 	set title(value: string) {

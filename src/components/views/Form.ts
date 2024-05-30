@@ -1,6 +1,6 @@
 import { ensureElement } from '../../utils/utils';
 import { Component } from '../base/Component';
-import { IEvents } from '../base/events';
+import { IEvents } from '../base/Events';
 
 // Интерфейс состояния формы
 
@@ -64,7 +64,7 @@ class Form<T> extends Component<IFormState> {
 	}
 
 	// Рендерим форму с указанным состоянием
-	
+
 	render(state: Partial<T> & IFormState): HTMLFormElement {
 		const { valid, errors, ...inputs } = state; // Разделяем состояние на валидность, ошибки и остальные поля
 		super.render({ valid, errors }); // Рендерим базовый компонент с валидностью и ошибками

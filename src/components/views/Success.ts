@@ -1,6 +1,6 @@
 import { ensureElement, formatSinaps } from '../../utils/utils'; // Импорт функций ensureElement и formatSinaps из утилитной папки
 import { Component } from '../base/Component'; // Импорт базового класса Component
-import { IEvents } from '../base/events'; // Импорт интерфейса IEvents из папки событий
+import { IEvents } from '../base/Events'; // Импорт интерфейса IEvents из папки событий
 
 // Интерфейс финальной страницы заказа
 interface ISuccess {
